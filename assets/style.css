@@ -1,0 +1,102 @@
+:root {
+    --primary: rgb(41, 41, 41);
+    --secondary: rgb(1, 136, 1);
+    --text-main: rgb(168, 168, 168);
+}
+
+* {
+    background-color: var(--primary);
+}
+
+main {
+    display:flex;
+}
+
+header {
+    text-align: center;
+    color: var(--text-main);
+}
+
+header h1 {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 45px;
+}
+
+body {
+    color: var(--secondary);
+}
+
+footer {
+    align-items:flex-end;
+    height: 25%;
+}
+
+.flexbox-container {
+    padding: 2%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.cards {
+    position:relative;
+    flex:auto;
+    justify-content:space-evenly;
+    width: 330px;
+    /* height: 200px; */
+    padding: 3%;
+    margin: 2%;
+    border: 3px dashed white;
+}
+
+.card-head {
+    position:absolute;
+    text-align: left;
+    top: -10%;
+    left: 24%;
+    width: 110px;
+    color: var(--secondary);
+    padding: 3% 27% 3% 3%;
+    column-width: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    justify-content: center
+}
+
+.cards p {
+    color: var(--text-main);
+}
+
+.code-box {
+    text-align: left;
+    padding: 10px;
+    background-image: linear-gradient(var(rgb(1, 136, 1) 0%), var(--secondary));
+}
+
+.footer {
+    text-align: center;
+    align-items: flex-end;
+}
+
+.cards, .card-head {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out
+}
+
+.cards:hover,
+.cards:hover .card-head  {
+    box-shadow: inset 0px 0px 8px var(--secondary), 0 0 15px var(--secondary);
+}
+
+@media screen and (max-width: 992px;) {
+    .cards {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px;) {
+    .cards {
+        flex-direction:column;
+    }
+}
